@@ -1,8 +1,15 @@
 import flask
 from flask import request, jsonify
+import random
+import string
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+
+def randomWord(lenght=8):
+	"""Generate a random string of fixed lenght"""
+	chars = string.ascii_letters + string.digits + string.punctuation
+	return ''.join(random.choice(chars) for i in range(lenght))
 
 @app.route('/', methods=['GET'])
 def home():
@@ -16,7 +23,7 @@ def api_random():
 def api_word():
 	if 'lenght' in request.args:
 		lenght = int(request.args['lenght'])
-		return "Lenght field retrieved."
+		return randomWord(lenght)
 	else:
 		return "ERROR: No 'lenght' field provided. Please, specify a lenght between 8 and 128."
 	
