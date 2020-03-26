@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 In order to execute the API, you need:
 - [Python 3.7](https://www.python.org/)
 - [pip](https://pip.pypa.io/en/stable/)
-- [Flask](https://palletsprojects.com/p/flask/)
+- Virtualenv
 
 ```
 $ git clone https://github.com/imgios/random-word.git
@@ -21,22 +21,25 @@ $ pip install flask
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+First of all, clone the repository:
 ```
-Give the example
+$ git clone https://github.com/imgios/random-word.git
+$ cd random-word
 ```
-
-And repeat
-
+Then, create a new virtualenv and activate it:
 ```
-until finished
+$ python3 -m venv venv
+$ source venv/bin/activate
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
+Now that you have a virtual environment created and activated, you can go ahead and install dependencies:
+```
+$ pip install requirements.txt
+```
+That's it, now you're ready to start the API:
+```
+$ python3 app.py
+```
+You should be able to reach it at _localhost:5000_.
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
