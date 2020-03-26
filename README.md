@@ -11,13 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 In order to execute the API, you need:
 - [Python 3.7](https://www.python.org/)
 - [pip](https://pip.pypa.io/en/stable/)
-- Virtualenv
-
-```
-$ git clone https://github.com/imgios/random-word.git
-$ cd random-word
-$ pip install flask
-```
+- [venv](https://docs.python.org/3/library/venv.html)
 
 ### Installing
 
