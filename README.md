@@ -33,7 +33,7 @@ That's it, now you're ready to start the API:
 ```
 $ python3 app.py
 ```
-You should be able to reach it at _localhost:5000_.
+![Installation result](https://github.com/imgios/random-word/blob/master/.github/installing.png?raw=true)
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
