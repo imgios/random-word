@@ -33,7 +33,12 @@ That's it, now you're ready to start the API:
 ```
 $ python3 app.py
 ```
-![Installation result](https://github.com/imgios/random-word/blob/master/.github/installing.png?raw=true)
+
+<p align="center">
+  <img width="492" height="376" src="https://github.com/imgios/random-word/blob/master/.github/installing.png?raw=true">
+  <br/><sub><i>API startup.</i></sub>
+</p>
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
