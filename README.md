@@ -41,7 +41,11 @@ $ python3 app.py
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Add additional notes about how to deploy this on a live system.
+
+| Endpoint | Parameters | Description |
+| --- | --- | --- |
+| /api/word | bla | bla, bla, bla |
 
 ## Built With
 
