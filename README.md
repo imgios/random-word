@@ -27,7 +27,7 @@ $ source venv/bin/activate
 ```
 Now that you have a virtual environment created and activated, you can go ahead and install dependencies:
 ```
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 ```
 That's it, now you're ready to start the API:
 ```
