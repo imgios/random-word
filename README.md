@@ -43,9 +43,9 @@ $ python3 app.py
 
 Add additional notes about how to deploy this on a live system.
 
-| Endpoint | Parameters | Description |
-| --- | --- | --- |
-| /api/word | bla | bla, bla, bla |
+| Endpoint | Method | Parameters | Description | Example
+| --- | :---: | --- | --- | --- |
+| `/api/word` | `GET` | `length` indicates how much long the word should be in a range between 8 and 128. | Return a JSON object with attributes: `status` and `content`. If `status` equal `OK`, then `content` will contains the word generated. Otherwise, status will be `ERROR` and `content` will contains information about the error. | `/api/word?length=8` |
 
 ## Built With
 
