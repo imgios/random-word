@@ -1,6 +1,8 @@
 # 🎲 Random Word API
 
-Random-word is a basic API that provides a word generated randomly with letters, numbers and special chars. I did it to learn Python and Flask.
+Random-word is a basic API that provides a word generated randomly with letters, numbers and special chars. I did it to learn Python and Flask. 
+
+Feel free to open an issue if you want to report an error or give me some advice, you're welcome!
 
 ## Getting Started
 
