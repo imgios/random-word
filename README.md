@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 In order to execute the API, you need:
-- [Python 3.7](https://www.python.org/)
+- [Python >=3.7](https://www.python.org/)
 - [pip](https://pip.pypa.io/en/stable/)
 - [venv](https://docs.python.org/3/library/venv.html)
 
