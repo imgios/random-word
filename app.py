@@ -6,9 +6,14 @@ import string
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-def randomWord(word_length=8):
+def randomWord(word_length=8, word_mode='strong'):
 	"""Generate a random string of fixed lenght"""
-	chars = string.ascii_letters + string.digits + string.punctuation
+	chars = string.ascii_letters # ASCII letters (weak setting)
+	if word_mode == 'medium':
+		chars += string.digits # ASCII letters + digits (medium setting)
+	elif word_mode == 'strong':
+		chars += string.digits  + string.punctuation # ASCII letters + digits + punctuation (strong setting)
+		
 	return ''.join(random.choice(chars) for i in range(word_length))
 
 @app.route('/')
@@ -20,12 +25,20 @@ def index():
 def api_word():
 	if 'length' in request.args:
 		lenght = int(request.args['length'])
-		res = jsonify({'status': 'OK', 'content': randomWord(lenght)})
-		res.status_code = 200
-		return res
 	else:
 		res = jsonify({'status': 'ERROR', 'content': 'No length field provided.'})
 		res.status_code = 400
+		return res
+	
+	if 'mode' in request.args:
+		mode = request.args['mode']
+		if (mode.lower() == 'weak' or mode.lower() == 'medium' or mode.lower() == 'strong'):
+			res = jsonify({'status': 'OK', 'content': randomWord(lenght, mode.lower())})
+			res.status_code = 200
+			return res
+	else:
+		res = jsonify({'status': 'OK', 'content': randomWord(lenght)})
+		res.status_code = 200
 		return res
 
 @app.errorhandler(404)
