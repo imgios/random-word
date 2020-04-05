@@ -19,8 +19,7 @@ def home():
 def api_word():
 	if 'length' in request.args:
 		lenght = int(request.args['length'])
-		msg = {'status': 'OK', 'content': randomWord(lenght)}
-		res = jsonify(msg)
+		res = jsonify({'status': 'OK', 'content': randomWord(lenght)})
 		res.status_code = 200
 		return res
 	else:
