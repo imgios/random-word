@@ -26,5 +26,11 @@ def api_word():
 		res = jsonify({'status': 'ERROR', 'content': 'No length field provided.'})
 		res.status_code = 400
 		return res
-	
+
+@app.errorhandler(404)
+def not_found(error=None):
+	res = jsonify({'status': 'ERROR', 'content': 'Not Found: ' + request.url})
+	res.status_code = 404
+	return res
+
 app.run()
