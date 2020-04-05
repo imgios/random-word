@@ -30,12 +30,11 @@ def api_word():
 		res.status_code = 400
 		return res
 	
-	if 'mode' in request.args:
+	if ('mode' in request.args) and (request.args['mode'] == 'weak' or request.args['mode'] == 'medium' or request.args['mode'] == 'strong'):
 		mode = request.args['mode']
-		if (mode.lower() == 'weak' or mode.lower() == 'medium' or mode.lower() == 'strong'):
-			res = jsonify({'status': 'OK', 'content': randomWord(lenght, mode.lower())})
-			res.status_code = 200
-			return res
+		res = jsonify({'status': 'OK', 'content': randomWord(lenght, mode)})
+		res.status_code = 200
+		return res
 	else:
 		res = jsonify({'status': 'OK', 'content': randomWord(lenght)})
 		res.status_code = 200
