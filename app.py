@@ -1,5 +1,5 @@
 import flask
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 import random
 import string
 
@@ -11,9 +11,10 @@ def randomWord(word_length=8):
 	chars = string.ascii_letters + string.digits + string.punctuation
 	return ''.join(random.choice(chars) for i in range(word_length))
 
-@app.route('/', methods=['GET'])
+@app.route('/')
+@app.route('/index')
 def index():
-	return "<h1>A basic API made in Python</h1><p>This website is a basic API prototype built with Python3 and Flask!</p>"
+	return render_template('index.html', title='Random-word API')
 	
 @app.route('/api/word', methods=['GET'])
 def api_word():
