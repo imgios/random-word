@@ -47,7 +47,7 @@ Add additional notes about how to deploy this on a live system.
 
 | Endpoint | Method | Parameters | Description | Example
 | --- | :---: | --- | --- | --- |
-| `/api/word` | `GET` | `int:length` indicates how much long the word should be in a range between 8 and 128. | Return a JSON object with two attributes: `status` and `content`. If `status` equal `OK`, then `content` will contains the word generated. Otherwise, status will be `ERROR` and `content` will contains information about the error. | `/api/word?length=8` |
+| `/api/word` | `GET` | `int:length` indicates how much long the word should be in a range between 8 and 128. `string:mode` indicates the complexity of the word. It it's equal to 'weak' will generate a word with only letters, 'medium' will generate a word with letters and digits, and 'strong' will generate a word with letters, digits and symbols. | Return a JSON object with two attributes: `status` and `content`. If `status` equal `OK`, then `content` will contains the word generated. Otherwise, status will be `ERROR` and `content` will contains information about the error. | `/api/word?length=8` |
 
 ## Built With
 
