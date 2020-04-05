@@ -12,7 +12,7 @@ def randomWord(word_length=8):
 	return ''.join(random.choice(chars) for i in range(word_length))
 
 @app.route('/', methods=['GET'])
-def home():
+def index():
 	return "<h1>A basic API made in Python</h1><p>This website is a basic API prototype built with Python3 and Flask!</p>"
 	
 @app.route('/api/word', methods=['GET'])
