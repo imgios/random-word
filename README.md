@@ -1,4 +1,4 @@
-# 🎲 Random Word API
+# 🔣 Random Word API
 
 Random-word is a basic API that provides a word generated randomly with letters, numbers and special chars. I did it to learn Python and Flask. 
 
